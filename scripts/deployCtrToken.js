@@ -1,7 +1,7 @@
 const artifacts = require('hardhat').artifacts
 const BN = web3.utils.BN;
 
-const PolcToken = artifacts.require('PolcToken.sol');
+const CtrToken = artifacts.require('CtrToken.sol');
 
 let token;
 let tokenAddress;
@@ -17,15 +17,15 @@ async function main() {
     console.log(`Sending transactions with gas price: ${gasPrice.toString(10)} (${gasPrice.div(new BN(10).pow(new BN(9))).toString(10)} gweis)`);
 
     if (tokenAddress == undefined) {
-        token = await PolcToken.new(deployer);
+        token = await CtrToken.new(deployer);
         tokenAddress = token.address;
-        console.log(`Deployed POLC token address: ${tokenAddress}`);
+        console.log(`Deployed CTR token address: ${tokenAddress}`);
     } else {
-        token = await PolcToken.at(tokenAddress);
-        console.log(`Interacting POLC token address: ${tokenAddress}`);
+        token = await CtrToken.at(tokenAddress);
+        console.log(`Interacting CTR token address: ${tokenAddress}`);
     }
 
-    console.log(`POLC token balance: ${(await token.balanceOf(deployer)).toString(10)}`);
+    console.log(`CTR token balance: ${(await token.balanceOf(deployer)).toString(10)}`);
 }
 
 main()

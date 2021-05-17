@@ -1,7 +1,7 @@
 {
-  "name": "polc-token",
+  "name": "ctr-token",
   "version": "1.0.0",
-  "description": "ERC20 token of PolkaCreator",
+  "description": "ERC20 token of CreatorChain",
   "main": "index.js",
   "scripts": {
     "start": "docker run --name eth-node --detach --publish 8545:8545 trufflesuite/ganache-cli:latest",
@@ -19,13 +19,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PolkaCreator/polc-token.git"
+    "url": "git+https://github.com/CreatorChain/creator-token.git"
   },
   "keywords": [],
   "author": "Jack",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PolkaCreator/polc-token/issues"
+    "url": "https://github.com/CreatorChain/creator-token/issues"
   },
   "homepage": "https://polkacreator.network",
   "devDependencies": {
